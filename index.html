@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Чардж · Детейлинг</title>
+<meta name="description" content="Полировка и керамика, химчистка салона, мойка, оклейка плёнкой. Цены на сайте, запись на удобное время.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Детейлинг в Санкт-Петербурге: полировка, керамика, оклейка">
+<meta property="og:description" content="Полировка и керамика, химчистка салона, мойка, оклейка плёнкой. Цены на сайте, запись на удобное время.">
+<meta property="og:image" content="assets/hero.webp">
+<link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%276%27 width=%2720%27 height=%2720%27 rx=%275%27 fill=%27%23d3dae1%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --c-canvas: #0c0d0f; --c-surface: #17191c; --c-ink: #f1f2f4; --c-ink-soft: #9ba1a9; --c-accent: #d3dae1; --c-accent-ink: #0c0d0f; --c-accent-deep: #d3dae1; --f-display: "Rubik", "Arial", system-ui, sans-serif; --f-text: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --h1k: 0.66; }
+</style>
+<link rel="stylesheet" href="style-prod.css">
+<style>
+/* ---- виджет-сотрудник: отвечаем сразу, круглосуточно ------------------- */
+.agent { position: fixed; right: clamp(12px, 2vw, 28px); bottom: clamp(12px, 2.4vh, 28px); z-index: 60;
+  display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--c-ink); }
+.agent__bubble { display: grid; gap: 2px; padding: 10px 16px; border-radius: 16px 16px 4px 16px;
+  background: var(--c-surface); box-shadow: 0 10px 30px rgb(0 0 0 / .45), 0 0 0 1px rgb(255 255 255 / .08);
+  font-family: var(--f-text); line-height: 1.25; max-width: 15rem;
+  opacity: 0; transform: translateY(8px); animation: agent-in .5s 1.4s cubic-bezier(.2,.7,.2,1) forwards; }
+.agent__bubble b { font-size: .95rem; font-weight: 700; }
+.agent__bubble span { font-size: .8rem; color: var(--c-ink-soft); }
+.agent__photo { position: relative; flex: none; width: 64px; height: 64px; border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--c-accent), 0 10px 26px rgb(0 0 0 / .45); transition: transform .2s ease-out; }
+.agent__photo img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+.agent__photo::before { content: ""; position: absolute; inset: -3px; border-radius: 50%; border: 2px solid var(--c-accent);
+  animation: agent-pulse 2.6s ease-out infinite; pointer-events: none; }
+.agent__photo i { position: absolute; right: 1px; bottom: 1px; width: 15px; height: 15px; border-radius: 50%;
+  background: #2fbf5b; box-shadow: 0 0 0 3px var(--c-surface); }
+.agent:hover .agent__photo, .agent:focus-visible .agent__photo { transform: scale(1.05); }
+.agent:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 4px; border-radius: 40px; }
+@keyframes agent-in { to { opacity: 1; transform: none; } }
+@keyframes agent-pulse { 0% { opacity: .8; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(1.35); } }
+.agent__photo b { display: none; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%); padding: 1px 6px; border-radius: 8px;
+  background: var(--c-accent); color: var(--c-accent-ink); font: 700 10px/1.4 var(--f-text); white-space: nowrap; }
+@media (max-width: 640px) {
+  .agent { bottom: calc(80px + env(safe-area-inset-bottom)); }
+  .agent__bubble { display: none; }
+  .agent__photo { width: 54px; height: 54px; }
+  .agent__photo i { right: -2px; bottom: auto; top: 0; width: 13px; height: 13px; }
+  .agent__photo b { display: block; }
+}
+.agent { transition: opacity .25s ease-out, transform .25s ease-out; }
+.agent.is-away { opacity: 0; transform: translateY(10px); pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .agent__bubble { animation: none; opacity: 1; transform: none; } .agent__photo::before { animation: none; opacity: 0; } }
+/* ---- правки Юрия 08.10.2026 --------------------------------------------- */
+/* заголовок первого экрана: слова не переносятся и не рвутся, слова с дефисом не разрываются */
+.s-hero h1 { hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: normal; }
+.s-hero h1 .nb { white-space: nowrap; }
+/* верхняя шапка (имя компании, телефон, кнопка) крупнее на 25 % */
+.s-bar { padding-top: 12px; padding-bottom: 12px; }
+.s-bar__brand { font-size: 1.25rem; min-height: 48px; }
+.s-bar__tel { font-size: 1.2rem; }
+.s-bar .s-btn--sm { font-size: 1.05rem; min-height: 46px; }
+@media (max-width: 640px) {
+  .s-bar__brand { font-size: 1.15rem; }
+  .s-bar .s-btn--sm { font-size: .98rem; min-height: 44px; padding: 0 1em; }
+}
+</style>
+</head>
+<body class="s-prod" id="top" data-wa="79817360282" data-tg="" data-max="">
+<header class="s-bar" data-s-bar>
+  <a class="s-bar__brand" href="#top"><i aria-hidden="true"></i>Чардж</a>
+  <div class="s-bar__right">
+    <a class="s-bar__tel" href="tel:+79817360282">+7 (981) 736-02-82</a>
+    <a class="s-btn s-btn--sm" href="#widget">Записаться</a>
+  </div>
+</header>
+<main>
+  <section class="s-hero">
+    <div class="s-hero__text">
+      <p class="s-eyebrow">Детейлинг и оклейка · Санкт-Петербург</p>
+      <h1>Детейлинг в <span class="nb">Санкт-Петербурге</span>: полировка, керамика, оклейка</h1>
+      <p class="s-lead">Полировка и керамика, химчистка салона, мойка, оклейка плёнкой. Цены на сайте, запись на удобное время.</p>
+      <ul class="s-ticks"><li>Полировка кузова и покрытие керамикой</li><li>Химчистка салона и мойка</li><li>Оклейка кузова защитной и цветной плёнкой</li></ul>
+      <p class="s-rating"><b>5,0</b> на Яндекс.Картах · 100 отзывов</p>
+      <figure class="s-hero__photo"><img class="" src="assets/hero.webp" alt="Porsche в светлом боксе студии детейлинга «Чардж»" loading="lazy" decoding="async" style="object-position:50% 50%"></figure>
+    </div>
+    <div class="s-hero__widget" id="widget"><form class="s-widget" data-s-booking data-days="7" data-closed="" data-slots="10:00,11:00,12:00,13:00,14:00,15:00,16:00,17:00,18:00,19:00" data-message="Здравствуйте! Хочу записаться в сервис: {услуга}, {день} в {время}. Марку, год и что беспокоит – напишу ниже." onsubmit="return false">
+      <h2 class="s-widget__title">Запись</h2>
+      <fieldset><legend>Услуга</legend>
+        <div class="s-chips s-chips--col"><label class="s-chip s-chip--row"><input type="radio" name="svc" value="0" data-name="Локальная полировка" data-price="1000" data-from="" data-min="" checked><span>Локальная полировка</span><b>1 000 ₽</b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="1" data-name="Полировка и керамика" data-price="45000" data-from="" data-min=""><span>Полировка и керамика</span><b>45 000 ₽</b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="2" data-name="Химчистка салона" data-price="20000" data-from="" data-min=""><span>Химчистка салона</span><b>20 000 ₽</b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="3" data-name="Оклейка оптики тонирующим полиуретаном" data-price="12000" data-from="" data-min=""><span>Оклейка оптики тонирующим полиуретаном</span><b>12 000 ₽</b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="4" data-name="Полная оклейка кузова" data-price="300000" data-from="1" data-min=""><span>Полная оклейка кузова</span><b>от 300 000 ₽</b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="5" data-name="Подарочный сертификат" data-price="10000" data-from="" data-min=""><span>Подарочный сертификат</span><b>10 000 ₽</b></label></div>
+      </fieldset>
+      <fieldset><legend>День</legend><div class="s-chips" data-s-days></div></fieldset>
+      <fieldset><legend>Время</legend><div class="s-chips" data-s-times></div></fieldset>
+      <div class="s-bubble" aria-live="polite"><span class="s-bubble__label">Ваше сообщение</span><p data-s-bubble></p></div>
+      <div class="s-send">
+        <a class="s-btn s-btn--wide" data-s-msg="whatsapp" href="#">Записаться в WhatsApp</a>
+        
+      </div>
+      <p class="s-send__note" data-s-copied hidden>Текст скопирован – вставьте его в чат.</p>
+      
+    </form></div>
+    <figure class="s-hero__bg" aria-hidden="true"><img class="" src="assets/hero.webp" alt="Porsche в светлом боксе студии детейлинга «Чардж»" decoding="async" style="object-position:50% 50%" fetchpriority="high"></figure>
+  </section>
+
+  
+
+  <section class="s-section s-reveal" id="prices">
+    <header class="s-section__head"><h2>Цены</h2><p>Цены на основные работы. Окончательную сумму назовём после осмотра автомобиля.</p></header>
+    <div class="s-board"><div class="s-board__group">
+      <h3 class="s-board__title">Полировка и керамика</h3>
+      <ul class="s-board__list">
+        <li class="s-board__row"><span class="s-board__name">Локальная полировка</span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">1 000 ₽</span></li>
+        <li class="s-board__row"><span class="s-board__name">Глянцевая полировка кузова, чистка кресел и детейлинг-уборка</span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">30 000 ₽</span></li>
+        <li class="s-board__row"><span class="s-board__name">Полировка в 3 этапа и покрытие керамикой</span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">45 000 ₽</span></li>
+      </ul>
+    </div>
+<div class="s-board__group">
+      <h3 class="s-board__title">Салон</h3>
+      <ul class="s-board__list">
+        <li class="s-board__row"><span class="s-board__name">Химчистка салона<em>салон и багажник без разбора</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">20 000 ₽</span></li>
+        <li class="s-board__row"><span class="s-board__name">Локальная чистка элемента</span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">1 000 ₽</span></li>
+      </ul>
+    </div>
+<div class="s-board__group">
+      <h3 class="s-board__title">Оклейка плёнкой</h3>
+      <ul class="s-board__list">
+        <li class="s-board__row"><span class="s-board__name">Оклейка оптики тонирующим полиуретаном</span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">12 000 ₽</span></li>
+        <li class="s-board__row"><span class="s-board__name">Полная оклейка кузова защитной полиуретановой плёнкой</span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">от 300 000 ₽</span></li>
+        <li class="s-board__row"><span class="s-board__name">Оклейка кузова цветным полиуретаном</span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">340 000 ₽</span></li>
+      </ul>
+    </div>
+<div class="s-board__group">
+      <h3 class="s-board__title">Подарок</h3>
+      <ul class="s-board__list">
+        <li class="s-board__row"><span class="s-board__name">Подарочный сертификат</span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">10 000 ₽</span></li>
+      </ul>
+    </div></div>
+    <p class="s-note">Нужной работы нет в списке – напишите или позвоните, посчитаем.</p>
+  </section>
+
+  <section class="s-section s-reveal">
+    <header class="s-section__head"><h2>Как проходит</h2></header>
+    <ol class="s-steps">
+      <li class="s-steps__item"><span class="s-steps__n">01</span><h3>Записались на время</h3><p>В форме выше, по телефону или в мессенджере.</p></li>
+      <li class="s-steps__item"><span class="s-steps__n">02</span><h3>Приехали к нам</h3><p>Ждём вас по адресу: Ждановская ул., 29.</p></li>
+      <li class="s-steps__item"><span class="s-steps__n">03</span><h3>Согласовали работы</h3><p>Мастер уточняет задачу и называет стоимость.</p></li>
+      <li class="s-steps__item"><span class="s-steps__n">04</span><h3>Забрали машину</h3><p>Готово к назначенному времени.</p></li>
+    </ol>
+  </section>
+
+  <section class="s-photos s-reveal" aria-label="Фото"><figure><img class="" src="assets/p1.webp" alt="Rolls-Royce в боксе студии «Чардж»" loading="lazy" decoding="async" style="object-position:50% 50%"><figcaption>Бокс студии</figcaption></figure><figure><img class="" src="assets/p2.webp" alt="Nissan GT-R в боксе после детейлинга" loading="lazy" decoding="async" style="object-position:50% 50%"><figcaption>Детейлинг на месте</figcaption></figure><figure><img class="" src="assets/p3.webp" alt="Maybach в боксе студии" loading="lazy" decoding="async" style="object-position:50% 50%"><figcaption>Работы студии</figcaption></figure></section>
+
+  <section class="s-section s-reveal">
+    <header class="s-section__head"><h2>Что здесь есть</h2></header>
+    <ul class="s-promises">
+      <li><h3>Полировка и керамика</h3><p>Полировка кузова в три этапа и покрытие керамикой.</p></li>
+      <li><h3>Химчистка салона</h3><p>Салон и багажник, в том числе светлая кожа.</p></li>
+      <li><h3>Оклейка плёнкой</h3><p>Защитный и цветной полиуретан, оклейка оптики.</p></li>
+      <li><h3>Подарочный сертификат</h3><p>Подарок на любую услугу студии.</p></li>
+    </ul>
+  </section>
+
+  <section class="s-section s-reveal">
+    <header class="s-section__head s-section__head--reviews"><h2>Отзывы с Яндекс.Карт</h2><p class="s-reviews__rating"><span class="s-reviews__num">5,0</span><span class="s-reviews__stars" style="--r: 5" aria-label="рейтинг 5,0 из 5"></span><span class="s-reviews__count">100 отзывов</span><a class="s-reviews__all" href="https://yandex.ru/maps/org/charge/201229519912/reviews/" target="_blank" rel="noopener">Читать все отзывы на Яндекс.Картах</a></p></header>
+    <ul class="s-reviews">
+      <li><blockquote>«Позвонила и записалась на мойку день в день. Очень качественно помыли машину. Ребята, которые работают очень приветливые. Однозначно вернусь )»</blockquote><p class="s-reviews__who">Екатерина · 21 сентября</p></li>
+      <li><blockquote>«Очень благодарна за работу - химчистка салона и мойка машины! Буду обращаться ещё и советовать близким»</blockquote><p class="s-reviews__who">Зия Ч. · 2 июля</p></li>
+      <li><blockquote>«Отдавал машину на полировку с керамикой+ удавление вмятин без покраски. Результатом максимально доволен! Обслуживание на высоте, спасибо ребятам, буду всегда обращаться к ним и всем советовать!»</blockquote><p class="s-reviews__who">Иван К. · 26 мая 2024</p></li>
+    </ul>
+    <p class="s-note">Отзывы с карточки на Яндекс.Картах, без правок.</p>
+  </section>
+
+  <section class="s-section s-reveal">
+    <header class="s-section__head"><h2>Частые вопросы</h2></header>
+    <div class="s-faq"><details><summary>Нужна ли запись?</summary><p>Лучше записаться: выберите время в форме выше, позвоните нам или напишите в WhatsApp. Мы принимаем клиентов к назначенному времени.</p></details><details><summary>Сколько стоит полировка с керамикой?</summary><p>Полировка в три этапа и покрытие керамикой стоит 45 000 ₽. Точную сумму назовём после осмотра автомобиля.</p></details><details><summary>Делаете ли химчистку салона?</summary><p>Да, химчистка салона и багажника стоит 20 000 ₽.</p></details><details><summary>Когда вы работаете?</summary><p>Мы работаем ежедневно с 10:00 до 20:30. Адрес: Ждановская улица, 29.</p></details></div>
+  </section>
+
+  <section class="s-section s-final s-reveal" id="contacts">
+    <header class="s-section__head"><h2>Запишитесь на удобное время</h2></header>
+    <div class="s-contacts">
+      <dl>
+        <div><dt>Адрес</dt><dd>Ждановская ул., 29, Санкт-Петербург</dd></div>
+        <div><dt>Часы</dt><dd>Каждый день 10:00–20:30</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79817360282">+7 (981) 736-02-82</a></dd></div>
+      </dl>
+      <div class="s-contacts__actions">
+        <a class="s-btn" href="#widget">Записаться</a>
+        <a class="s-btn s-btn--ghost" data-s-msg="whatsapp" href="#">WhatsApp</a>
+        
+      </div>
+    </div>
+  </section>
+</main>
+<!-- agent-widget -->
+<a class="agent" href="#widget" aria-label="Написать нам: отвечаем сразу, круглосуточно">
+  <span class="agent__bubble"><b>Отвечаем сразу</b><span>круглосуточно, администратор на связи</span></span>
+  <span class="agent__photo"><img src="assets/agent.webp" alt="" width="64" height="64" loading="lazy"><i aria-hidden="true"></i><b aria-hidden="true">24/7</b></span>
+</a>
+<!-- /agent-widget -->
+<footer class="s-foot"><p>Чардж · Санкт-Петербург</p><p>Детейлинг</p></footer>
+<nav class="s-dock" aria-label="Быстрая связь"><a class="s-btn" href="#widget">Записаться</a><a class="s-btn s-btn--ghost" href="tel:+79817360282">Позвонить</a></nav>
+<script src="style.js" defer></script>
+<script>
+  // кружок менеджера прячется, пока на экране форма записи (не наезжает на неё)
+  (function () {
+    var a = document.querySelector('.agent'), w = document.getElementById('widget');
+    if (!a || !w || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (es) { a.classList.toggle('is-away', es[0].isIntersecting); }, { rootMargin: '0px 0px -90px 0px' }).observe(w);
+  })();
+</script>
+</body>
+</html>
